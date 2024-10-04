@@ -3,7 +3,7 @@ body {
     background-color: #1c191a;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    margin: 0; /*selain luo automaattisesti pienen marginaalin*/
+    margin: 0; 
 }
 
 header{
@@ -12,6 +12,11 @@ header{
     border: 2px solid rgb(87, 16, 4);
     
 }
+
+/*fontit*/
+@font-face {
+    font-family: otsikko;
+
 
 h1 {
     font-size: 35px;
@@ -23,6 +28,9 @@ h3 {
     font-size: 25px;
 }
 
+.esittely {
+    padding-left: 20px; 
+}
 footer{
     flex-direction: row;
     text-align: left;
@@ -31,4 +39,17 @@ footer{
     width: 100%;
     max-height: 15%;
     border: 2px solid rgb(87, 16, 4);
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    #etusivu {
+        background-image: url(Soundiholisti/kuvat/Seina-400-300.jpg);
+        background-size: cover;
+        height: 950px;
+    }
+
+}
+
 }
