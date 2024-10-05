@@ -7,9 +7,9 @@ body {
 }
 header{
     display: flex;
-    justify-content: center; /* Keskittää navigaation vaakasuunnassa */
-    align-items: center; /* Keskittää sisällön pystysuunnassa */
-    position: relative; /* Tämä varmistaa, että logo pysyy paikoillaan */
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
     border-bottom: 8px solid #f6e7d8;
 }
 
@@ -136,6 +136,7 @@ footer{
     justify-content: space-around;
     padding-top: 15px;
     padding-bottom: 15px;
+    width: 100%;
     
 }
 
@@ -323,7 +324,7 @@ footer{
         position: fixed;
         flex-direction: column;
         text-align: center;
-        width: 100%;
+    
        
     }
 }
