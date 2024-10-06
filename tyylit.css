@@ -34,6 +34,9 @@ h2, h3 {
     
     font-family: otsikko, "sans serif";
 }
+a{
+    color:#f6e7d8;
+}
 .tuotteita a{
  text-decoration: none;
 }
