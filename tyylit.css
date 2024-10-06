@@ -83,8 +83,8 @@ nav a:hover {
 
 .CTA {
     display: flex;
-    justify-content: center; /* Teksti keskitetään vaakasuunnassa */
-    align-items: center; /* Teksti keskitetään pystysuunnassa */
+    justify-content: center; 
+    align-items: center; 
     border: 2px solid  #f6e7d8;
     border-radius: 10px;
     background-color: #1c191a;
@@ -93,11 +93,11 @@ nav a:hover {
     padding: 25px 32px;
     text-align: center;
     text-decoration: none;
-    margin: 100px 20px; /* Lisää ylhäältä ja alhaalta marginaalia */
+    margin: 100px 20px; 
     cursor: pointer;
-    width: auto; /* Laatikko mukautuu sisällön mukaan */
-    height: auto; /* Varmistaa, että korkeus mukautuu */
-    font-size: 1.5rem; /* Responsiivinen fonttikoko */
+    width: auto;
+    height: auto; 
+    font-size: 1.5rem; 
     box-sizing: border-box;
 }
 
@@ -147,6 +147,41 @@ figcaption {
 
 }
 
+.kappale2 {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "teksti kartta";
+    gap: 20px; /* Väli teksti- ja karttaosioiden välillä */
+    margin-bottom: 200px;
+}
+
+.grid-teksti {
+    grid-area: teksti;
+    background-color: #404040; /* Taustaväri */
+    color: #e8e6e6; /* Tekstiväri */
+    border-radius: 8px; /* Kulmat pyöristettyinä */
+    padding: 20px; /* Tilaa tekstin ympärillä */
+
+}
+
+.grid-kartta {
+    grid-area: kartta;
+    color:#1c191a ;
+    background-color: #f6e7d8; /* Taustaväri */
+    border-radius: 8px; /* Kulmat pyöristettyinä */
+    padding: 20px; /* Tilaa kartan ympärillä */
+}
+
+.grid-kartta iframe {
+    width: 100%; /* Kartta venyy täydelle leveydelle */
+    height: 400px; /* Korkeus kartalle */
+    border: none; /* Poistetaan kehys */
+    
+}
 .grid-teksti1 { grid-area: g1; }
 .grid-teksti2 { grid-area: g2; }
 .grid-kuva { grid-area: g3; }
@@ -205,7 +240,7 @@ footer{
         font-size: 1rem; /* Pienempi fontti mobiilinäytöissä */
         padding: 10px 20px;
         margin: 20px 0; /* Lisää tilaa ylhäällä ja alhaalla */
-        width: 100%; /* Täysleveys pienillä näytöillä */
+        width: 90%; /* Täysleveys pienillä näytöillä */
         height: 150px;
     }
     .logo {
@@ -284,12 +319,13 @@ footer{
        height: auto;
     }
     
-    .grid-yritys {
-        grid-template-areas:
-            'g1-h1'
-            'g2-hk1'
-            'g3-h2'
-            'g4-hk2';
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+            'teksti'
+            'kartta';
+        gap: 10px; /* Väli teksti- ja karttaosioiden välillä */
+        margin-bottom: 50px;
     }
     footer{
         flex-direction: column;
@@ -305,7 +341,10 @@ footer{
         background-size: cover;
         height: 300px;
     }
-   
+    
+    .CTA{
+        width: 25%;
+    }
 
     nav {
         display: flex;
@@ -355,8 +394,7 @@ footer{
             'g2 g2'
             'g3 g3';
         gap: 10px;
-        margin-top: 20px;
-        margin-bottom: 100px;
+        margin: 20px 50px 200px;
     }
 
     .kategoria {
@@ -366,13 +404,13 @@ footer{
     }
   
 
-    .grid-yritys {
-        grid-template-areas:
-            'g1-h1'
-            'g2-hk1'
-            'g3-h2'
-            'g4-hk2';
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+            'teksti','kartta';
+        gap: 10px; /* Väli teksti- ja karttaosioiden välillä */   
     }
+    
     footer{
         bottom: 0;
         position: fixed;
@@ -395,7 +433,10 @@ footer{
         height: 350px;
     }
    
-   
+    .CTA{
+        width: 55%;
+        
+    }
     nav a { 
         font-size: 18px;
         width: 60px;
@@ -414,6 +455,9 @@ footer{
         font-size: 25px;
     }
     
+    td{
+       font-size: 20px;
+    }
     .paaotsikko {
         margin: 3% 15% 3% 15%;
     }
@@ -435,8 +479,7 @@ footer{
             'g1 g1 g3'
             'g2 g2 g3';
         gap: 20px;
-        margin-top: 20px;
-        margin-bottom: 100px;
+        margin: 25px 20px 100px 20px;
     }
 
     .kategoria {
