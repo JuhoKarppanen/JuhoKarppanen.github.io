@@ -41,8 +41,7 @@ a{
  text-decoration: none;
 }
 .paaotsikko {
-    text-align: center;
-    
+    text-align: center;  
 }
 
 nav {
@@ -59,9 +58,8 @@ nav {
 }
 
 nav a {
-    
-    display: flex;
-    justify-content: center; 
+    display: flex; 
+    justify-content: center;
     align-items: center; 
     background: #1c191a ;
     font-family: otsikko, "sans serif";
@@ -143,8 +141,6 @@ figcaption {
     width: auto; 
     z-index: 10; 
     border-radius: 10px;
-    margin-right: 20px; 
-
 }
 
 .kappale2 {
@@ -173,6 +169,7 @@ figcaption {
     color:#1c191a ;
     background-color: #f6e7d8; 
     border-radius: 8px; 
+    padding: 15px;
 }
 
 .grid-kartta iframe {
@@ -195,7 +192,6 @@ figcaption {
     gap: 20px;
     padding: 20px;
 }
-
 
 footer{
     color: #1c191a;
@@ -298,6 +294,7 @@ footer{
         text-align: center;
         margin: 0 auto;
         border: 6px solid #f6e7d8;
+        
     }
  
     .kategoria img {
@@ -389,13 +386,14 @@ footer{
         text-align: center;
         border: 8px solid #f6e7d8;
     }
+    
     .kategoria img{
        max-width: 80%;
     }
     .grid-container {
         display: grid;
         grid-template-areas: 
-            'teksti''kartta';
+            'teksti kartta';
         gap: 10px;   
     }
     footer{
