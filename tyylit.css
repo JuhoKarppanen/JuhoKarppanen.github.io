@@ -7,14 +7,12 @@ body {
 }
 header{
     display: flex;
-    justify-content: space-between; /* Varmistaa, että elementit jakautuvat tasaisesti */
-    align-items: flex-start; /* Pysyy ylhäällä vasemmassa reunassa */
+    justify-content: space-between;
+    align-items: flex-start; 
     padding: 10px;
     border-bottom: 8px solid #f6e7d8;
-    position: relative; /* Tämä varmistaa, että kaikki elementit pysyvät näkyvissä */
+    position: relative; 
 }
-
-
 @font-face {
     font-family: otsikko;
     src: url(fontit/Copperplate-Gothic-Std-29-AB.ttf);
@@ -23,7 +21,6 @@ header{
     font-family: kappale;
     src: url(fontit/centurygothic.ttf);
 }
-
 p {
     font-size: 16px;
     font-family: kappale, "sans serif";
@@ -47,13 +44,13 @@ h2, h3 {
 nav {
     margin-left: 100px;  
     gap: 5px; 
-    position: absolute; /* Asetetaan tarkasti headerin sisällä */
-    top: 0; /* Yläreunaan */
-    right: 0; /* Oikeaan laitaan */
+    position: absolute; 
+    top: 0; 
+    right: 0; 
     display: flex;
-    gap: 20px; /* Väli linkkien välillä */
-    padding: 10px; /* Lisää vähän tyhjää tilaa linkkien ympärille */
-    position: relative; /* Navigaatio pysyy layoutissa */
+    gap: 20px; 
+    padding: 10px; 
+    position: relative; 
     margin-right: 100px;
 }
 
@@ -62,23 +59,24 @@ nav a {
     display: flex; /* Flexbox-linkin sisälle */
     justify-content: center; /* Keskittää tekstin vaakasuunnassa */
     align-items: center; /* Keskittää tekstin pystysuunnassa */
-    background: #f6e7d8;
+    background: #1c191a ;
     font-family: otsikko, "sans serif";
-    color: #1c191a;
+    color: #e8e6e6 ;
     text-decoration: none;
-    border: 3px solid #1c191a;
+    border: 4px solid #f6e7d8;
     border-radius: 25px;
     padding: 0 20px; /* Varmista, että padding on vain sivuilla */
     height: 50px; /* Sama korkeus kaikille linkeille */
     box-sizing: border-box; /* Sisällyttää paddingin laatikon kokoon */
 }
 nav a:hover {
-    color: rgba(87, 54, 4);
-    background-color: whitesmoke;
+    color: #1c191a;
+    background-color: #e8e6e6 ;
 }
 #valittu {
     color:  #1c191a;
-    background-color: #e8e6e6;
+    background-color: #e8e6e6 ;
+    border: 4px solid #1c191a;
 }
 
 .CTA {
@@ -189,6 +187,7 @@ figcaption {
 #kategoria1 {grid-area: g1;}
 #kategoria2 {grid-area: g2;}
 #kategoria3 {grid-area: g3;}
+#kategoria4 {grid-area: g4;}
 
 .grid-container {
     display: grid;
@@ -221,26 +220,22 @@ footer{
     opacity: 0.6;
 }
 
-
-
 /*mobiilikoko*/
-@media (max-width: 600px) {
+@media (max-width: 850px) {
     #kaikki {
         background-image: url(kuvat/Seina-mobiili.jpg);
         background-size: cover;
         height: 400px;
     }
-
     header {
-        flex-direction: column; /* Muutetaan elementit päällekkäin pienillä näytöillä */
+        flex-direction: column; 
         align-items: center; 
     }
-
     .CTA {
-        font-size: 1rem; /* Pienempi fontti mobiilinäytöissä */
+        font-size: 1rem; 
         padding: 10px 20px;
-        margin: 20px 0; /* Lisää tilaa ylhäällä ja alhaalla */
-        width: 90%; /* Täysleveys pienillä näytöillä */
+        margin: 20px 0; 
+        width: 90%; 
         height: 150px;
     }
     .logo {
@@ -251,7 +246,7 @@ footer{
         flex-direction: column; 
         align-items: center; 
         gap: 0px; 
-        margin-top: 10px; /* Navigaatio siirtyy CTA:n alle */
+        margin-top: 10px; 
     }
     nav a { 
         font-size: 20px;
@@ -261,29 +256,24 @@ footer{
         width: 100%; 
         text-align: center; 
     }
-
     h1 {
         font-size: 25px;
     }
     h2{
-        font-size: 20px;
+        font-size: 20px; 
     }
     h3 {
         font-size: 18px;
     }
-
     .paaotsikko {
         margin: 3% 15% 3% 3%;
     }
-
     .kappale {
         margin: 3% 10% 3% 0.5%;
     }
-
     .kappale img {
         width: 275px;
     }
-    
     .kappale figure {
         width: 275px;
     }
@@ -293,20 +283,18 @@ footer{
             'g3'
             'g2';
     }
-
     .tuotteita {
         display: grid;
         grid-template-areas: 
             'g1'
             'g2'
             'g3'
-            ;
+            'g4';
         gap: 5px;
         margin-top: 20px;
         margin-left: 5px;
         margin-bottom: 25px;
     }
-
     .kategoria {
         width: 300px;
         padding: 10px;
@@ -316,7 +304,7 @@ footer{
  
     .kategoria img {
        width: 300px; 
-       height: auto;
+       height: 200px;
     }
     
     .grid-container {
@@ -324,7 +312,7 @@ footer{
         grid-template-areas: 
             'teksti'
             'kartta';
-        gap: 10px; /* Väli teksti- ja karttaosioiden välillä */
+        gap: 10px; 
         margin-bottom: 50px;
         
     }
@@ -332,8 +320,8 @@ footer{
         height: 350px;
     }
     .grid-kartta iframe {
-        width: 100%; /* Kartta venyy täydelle leveydelle */
-        height: 250px; /* Korkeus kartalle */
+        width: 100%; 
+        height: 250px; 
         
     }
     footer{
@@ -344,17 +332,15 @@ footer{
 }
 
 /*tablettikoko*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 850px) {
     #kaikki {
         background-image: url(kuvat/Seina-400-300.jpg);
         background-size: cover;
         height: 300px;
     }
-    
     .CTA{
         width: 25%;
     }
-
     nav {
         display: flex;
         flex-direction:row; 
@@ -371,7 +357,6 @@ footer{
         margin:5px 5px;
         text-align: center;
     }
-
     h1 {
         font-size: 30px;
     }
@@ -383,13 +368,11 @@ footer{
     }
     .paaotsikko {
         margin: 3% 10% 3% 10%;
-    }
-    
+    } 
     .kappale {
         margin: 3% 10% 3% 10%;
         flex-direction: column;
-    }
-    
+    }  
     #paasivu {
         grid-template-areas:
             'g1'
@@ -401,39 +384,33 @@ footer{
         grid-template-areas: 
             'g1 g1'
             'g2 g2'
-            'g3 g3';
+            'g3 g3'
+            'g4 g4';
         gap: 10px;
         margin: 20px 50px 200px;
     }
-
     .kategoria {
         padding: 10px;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-  
-
+    .kategoria img{
+       height: 300px;
+    }
     .grid-container {
         display: grid;
         grid-template-areas: 
             'teksti','kartta';
-        gap: 10px; /* Väli teksti- ja karttaosioiden välillä */   
+        gap: 10px;   
     }
-    
     footer{
         bottom: 0;
         position: fixed;
         flex-direction: column;
         text-align: center;
-        width: 100%;
-
-    
-       
+        width: 100%; 
     }
 }
-
-
-
 
 @media screen and (min-width: 1200px) {
     #kaikki {
@@ -441,7 +418,6 @@ footer{
         background-size: cover;
         height: 350px;
     }
-   
     .CTA{
         width: 55%;
         
@@ -463,7 +439,6 @@ footer{
     h3 {
         font-size: 25px;
     }
-    
     td{
        font-size: 20px;
     }
@@ -474,8 +449,6 @@ footer{
         margin: 3% 15% 3% 15%;
         flex-direction: row;
     }
-
-    
     #paasivu {
         grid-template-areas:
             'g1 g1 g3'
@@ -486,28 +459,14 @@ footer{
         display: grid;
         grid-template-areas: 
             'g1 g1 g3'
-            'g2 g2 g3';
+            'g2 g2 g4';
         gap: 20px;
         margin: 25px 20px 100px 20px;
     }
-
     .kategoria {
         padding: 20px;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    #kategoria3 img{
-        margin-top: 150px;
-        width: 700px;
-        height: 600px;
-        border-radius: 25px;
-    }
-    
-    .grid-yritys {
-        grid-template-areas:
-            'g1-h1 g1-h1 g2-hk1'
-            'g4-hk2 g3-h2 g3-h2';
-        margin-bottom: 50px;
     }
     footer{
         color: #1c191a;
@@ -518,7 +477,5 @@ footer{
         width: 100%;
         max-height: 15%;
         background-color: #f6e7d8;
-        border: 2px solid rgb(87, 16, 4);
-        
     }
 }
