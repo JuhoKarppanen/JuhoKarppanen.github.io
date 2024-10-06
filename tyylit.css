@@ -328,6 +328,9 @@ footer{
         margin-bottom: 50px;
         
     }
+    .grid-kartta{
+        height: 350px;
+    }
     .grid-kartta iframe {
         width: 100%; /* Kartta venyy täydelle leveydelle */
         height: 250px; /* Korkeus kartalle */
