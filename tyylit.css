@@ -7,10 +7,11 @@ body {
 }
 header{
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    position: relative; 
+    justify-content: space-between; /* Varmistaa, että elementit jakautuvat tasaisesti */
+    align-items: flex-start; /* Pysyy ylhäällä vasemmassa reunassa */
+    padding: 10px;
     border-bottom: 8px solid #f6e7d8;
+    position: relative; /* Tämä varmistaa, että kaikki elementit pysyvät näkyvissä */
 }
 
 
@@ -44,20 +45,32 @@ h2, h3 {
 }
 
 nav {
-    margin-left: 100px; 
-    display: flex; 
+    margin-left: 100px;  
     gap: 5px; 
+    position: absolute; /* Asetetaan tarkasti headerin sisällä */
+    top: 0; /* Yläreunaan */
+    right: 0; /* Oikeaan laitaan */
+    display: flex;
+    gap: 20px; /* Väli linkkien välillä */
+    padding: 10px; /* Lisää vähän tyhjää tilaa linkkien ympärille */
+    position: relative; /* Navigaatio pysyy layoutissa */
+    margin-right: 100px;
 }
 
 nav a {
     
+    display: flex; /* Flexbox-linkin sisälle */
+    justify-content: center; /* Keskittää tekstin vaakasuunnassa */
+    align-items: center; /* Keskittää tekstin pystysuunnassa */
     background: #f6e7d8;
     font-family: otsikko, "sans serif";
-    color:#1c191a;
+    color: #1c191a;
     text-decoration: none;
-    display: inline-block;
     border: 3px solid #1c191a;
     border-radius: 25px;
+    padding: 0 20px; /* Varmista, että padding on vain sivuilla */
+    height: 50px; /* Sama korkeus kaikille linkeille */
+    box-sizing: border-box; /* Sisällyttää paddingin laatikon kokoon */
 }
 nav a:hover {
     color: rgba(87, 54, 4);
@@ -68,13 +81,33 @@ nav a:hover {
     background-color: #e8e6e6;
 }
 
+.CTA {
+    display: flex;
+    justify-content: center; /* Teksti keskitetään vaakasuunnassa */
+    align-items: center; /* Teksti keskitetään pystysuunnassa */
+    border: 2px solid  #f6e7d8;
+    border-radius: 10px;
+    background-color: #1c191a;
+    font-family: otsikko, "sans serif";
+    color:  #e8e6e6;
+    padding: 25px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 100px 20px; /* Lisää ylhäältä ja alhaalta marginaalia */
+    cursor: pointer;
+    width: auto; /* Laatikko mukautuu sisällön mukaan */
+    height: auto; /* Varmistaa, että korkeus mukautuu */
+    font-size: 1.5rem; /* Responsiivinen fonttikoko */
+    box-sizing: border-box;
+}
+
 .kategoria {
     color:  #e8e6e6;
     background-color: #404040;
     border: 12px solid #f6e7d8;
     border-radius: 8px;
 }
-/*kuvat*/
+
 figure {
     border: 10px #f6e7d8 solid;
     margin: auto;
@@ -103,13 +136,15 @@ figcaption {
 }
 
 .logo {
-    position: absolute;
+    
     top: 10px;
     left: 10px;
     height: 100px; 
     width: auto; 
     z-index: 10; 
     border-radius: 25px;
+    margin-right: 20px; /* Lisää marginaalia logon oikealle puolelle */
+
 }
 
 .grid-teksti1 { grid-area: g1; }
@@ -152,12 +187,26 @@ footer{
 }
 
 
+
 /*mobiilikoko*/
 @media (max-width: 600px) {
     #kaikki {
         background-image: url(kuvat/Seina-mobiili.jpg);
         background-size: cover;
         height: 400px;
+    }
+
+    header {
+        flex-direction: column; /* Muutetaan elementit päällekkäin pienillä näytöillä */
+        align-items: center; 
+    }
+
+    .CTA {
+        font-size: 1rem; /* Pienempi fontti mobiilinäytöissä */
+        padding: 10px 20px;
+        margin: 20px 0; /* Lisää tilaa ylhäällä ja alhaalla */
+        width: 100%; /* Täysleveys pienillä näytöillä */
+        height: 150px;
     }
     .logo {
         height: 75px; 
@@ -166,14 +215,15 @@ footer{
         display: flex;
         flex-direction: column; 
         align-items: center; 
-        gap: 10px; 
+        gap: 0px; 
+        margin-top: 10px; /* Navigaatio siirtyy CTA:n alle */
     }
     nav a { 
         font-size: 20px;
         height: 25px;
-        padding: 40px;
+        padding: 20px 25px;
         margin:5px 20px;
-        width: 110px; 
+        width: 100%; 
         text-align: center; 
     }
 
@@ -255,18 +305,23 @@ footer{
         background-size: cover;
         height: 300px;
     }
-    
+   
+
     nav {
-        margin-top: 90px ;
-        margin-left: 5px;
+        display: flex;
+        flex-direction:row; 
+        align-items: center; 
+        gap: 0px; 
+        margin-left: 0;
+        
     }
     nav a { 
-        text-align: center;
-        font-size: 20px;
-        width: 130px;
+        font-size: 18px;
+        width: 60px;
         height: 25px;
-        padding: 50px;
-        margin:5px 20px;
+        padding: 65px;
+        margin:5px 5px;
+        text-align: center;
     }
 
     h1 {
@@ -339,12 +394,15 @@ footer{
         background-size: cover;
         height: 350px;
     }
+   
+   
     nav a { 
-        font-size: 20px;
-        width: 130px;
+        font-size: 18px;
+        width: 60px;
         height: 25px;
-        padding: 50px;
+        padding: 70px;
         margin:5px 20px;
+        text-align: center;
     }
     h1 {
         font-size: 45px;
