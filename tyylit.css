@@ -281,11 +281,11 @@ footer{
     }
 
     .kappale img {
-        width: 250px;
+        width: 275px;
     }
     
     .kappale figure {
-        width: 250px;
+        width: 275px;
     }
     #paasivu {
         grid-template-areas:
