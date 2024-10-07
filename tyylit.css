@@ -128,7 +128,7 @@ nav a:hover {
     background-color: #404040;
     border-radius: 8px;
 }
-
+/* --- Kuva asetukset alkavat --- */
 figure {
     border: 10px #f6e7d8 solid;
     margin: auto;
@@ -142,7 +142,6 @@ figcaption {
     padding: 8px;
     text-align: center;
 }
-
 
 .kappale img {
     width: 500px;
@@ -164,6 +163,7 @@ figcaption {
     z-index: 10; 
     border-radius: 10px;
 }
+/* --- Kuva asetukset loppuvat --- */
 
 .kappale2 {
     padding: 20px;
@@ -200,6 +200,7 @@ figcaption {
     border: none; 
     
 }
+
 .grid-teksti1 { grid-area: g1; }
 .grid-teksti2 { grid-area: g2; }
 .grid-kuva { grid-area: g3; }
