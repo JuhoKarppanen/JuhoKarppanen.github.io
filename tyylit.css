@@ -437,7 +437,6 @@ footer{
     }
     .CTA{
         width: 55%;
-        
     }
     nav a { 
         font-size: 18px;
@@ -497,4 +496,5 @@ footer{
         background-color: #f6e7d8;
     }
     /* --- MEDIA QUERYT loppuu --- */
+    
 }
